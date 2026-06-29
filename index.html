@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>সনদ - এক ঠিকানায় সকল সনদ</title>
+  <link rel="icon" href="logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ব্যাকগ্রাউন্ড ইফেক্ট -->
+  <div class="bg-fx">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+    <div class="gr"></div>
+  </div>
+  <div class="ptc" id="ptc"></div>
+
+  <!-- হেডার -->
+  <header id="hd">
+    <div class="hi">
+      <a href="#home" class="logo">
+        <img src="logo.png" alt="সনদ" onerror="this.src='https://placehold.co/120x42/253445/c6f91f?text=SONOD&font=roboto'">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">হোম</a></li>
+          <li><a href="#about">আমাদের সম্পর্কে</a></li>
+          <li><a href="#services">সেবাসমূহ</a></li>
+          <li><a href="https://v3.sonod.com.bd/auth/citizen-register" target="_blank">নাগরিক পোর্টাল</a></li>
+          <li><a href="https://v3.sonod.com.bd/tax-payment" target="_blank">হোল্ডিং ট্যাক্স</a></li>
+          <li><a href="javascript:void(0)" onclick="openContactPage()">যোগাযোগ</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=app.bdfast.sonoddorkar" target="_blank" class="nav-app"><i class="fab fa-google-play"></i> অ্যাপ ডাউনলোড</a></li>
+        </ul>
+      </nav>
+      <div class="ha">
+        <a href="https://v3.sonod.com.bd/auth/citizen-register" target="_blank" class="btn btn-g">নাগরিক পোর্টাল</a>
+        <button class="mob-t" aria-label="মেনু খুলুন">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- মোবাইল মেনু -->
+  <div class="mob-m">
+    <a href="#home">হোম</a>
+    <a href="#about">আমাদের সম্পর্কে</a>
+    <a href="#services">সেবাসমূহ</a>
+    <a href="https://v3.sonod.com.bd/auth/citizen-register" target="_blank">নাগরিক পোর্টাল</a>
+    <a href="https://v3.sonod.com.bd/tax-payment" target="_blank">হোল্ডিং ট্যাক্স</a>
+    <a href="javascript:void(0)" onclick="openContactPage();return false;">যোগাযোগ</a>
+    <a href="https://play.google.com/store/apps/details?id=app.bdfast.sonoddorkar" target="_blank"><i class="fab fa-google-play"></i> অ্যাপ ডাউনলোড</a>
+  </div>
+
+  <!-- মার্কি টিকার -->
+  <div class="mq-s">
+    <div class="mq-t">
+      <div class="mq-i"><i class="fas fa-check-circle"></i> ১০,০০০+ সনদ প্রদান সম্পন্ন</div>
+      <div class="mq-i"><i class="fas fa-clock"></i> ২৪ ঘন্টা সেবা প্রক্রিয়াধীন</div>
+      <div class="mq-i"><i class="fas fa-shield-halved"></i> সম্পূর্ণ নিরাপদ ডিজিটাল পদ্ধতি</div>
+      <div class="mq-i"><i class="fas fa-users"></i> ৫০০+ ইউনিয়ন পরিষদ সংযুক্ত</div>
+      <div class="mq-i"><i class="fas fa-bolt"></i> OCR ও ভয়েস ইনপুট সুবিধা</div>
+      <div class="mq-i"><i class="fas fa-mobile-screen"></i> অ্যান্ড্রয়েড অ্যাপ উপলব্ধ</div>
+      <!-- ডুপ্লিকেট ফর ইনফিনিট স্ক্রল -->
+      <div class="mq-i"><i class="fas fa-check-circle"></i> ১০,০০০+ সনদ প্রদান সম্পন্ন</div>
+      <div class="mq-i"><i class="fas fa-clock"></i> ২৪ ঘন্টা সেবা প্রক্রিয়াধীন</div>
+      <div class="mq-i"><i class="fas fa-shield-halved"></i> সম্পূর্ণ নিরাপদ ডিজিটাল পদ্ধতি</div>
+      <div class="mq-i"><i class="fas fa-users"></i> ৫০০+ ইউনিয়ন পরিষদ সংযুক্ত</div>
+      <div class="mq-i"><i class="fas fa-bolt"></i> OCR ও ভয়েস ইনপুট সুবিধা</div>
+      <div class="mq-i"><i class="fas fa-mobile-screen"></i> অ্যান্ড্রয়েড অ্যাপ উপলব্ধ</div>
+    </div>
+  </div>
+
+  <!-- হিরো সেকশন -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="h-content">
+        <div class="h-text">
+          <div class="h-badge"><i class="fas fa-sparkles"></i> বাংলাদেশের প্রথম ডিজিটাল সনদ প্ল্যাটফর্ম</div>
+          <h2>এক ঠিকানায় <span class="tg">সকল সনদ</span> — দ্রুত, নিরাপদ, স্বচ্ছ</h2>
+          <p>জন্ম সনদ থেকে শুরু করে হোল্ডিং ট্যাক্স পরিশোধ পর্যন্ত — ইউনিয়ন পরিষদের সকল সেবা এখন আপনার হাতের মুঠোয়। কোনো দালাল নয়, সরাসরি সেবা।</p>
+          <div class="h-stats">
+            <div class="hs"><h3>১০,০০০+</h3><p>সনদ প্রদান</p></div>
+            <div class="hs"><h3>৫০০+</h3><p>ইউনিয়ন পরিষদ</p></div>
+            <div class="hs"><h3>২৪/৭</h3><p>সেবা চালু</p></div>
+          </div>
+          <div class="h-btns">
+            <a href="https://v3.sonod.com.bd/auth/citizen-register" target="_blank" class="btn btn-p btn-lg"><i class="fas fa-file-certificate"></i> সনদের জন্য আবেদন</a>
+            <a href="https://v3.sonod.com.bd/tax-payment" target="_blank" class="btn btn-o btn-lg"><i class="fas fa-landmark"></i> ট্যাক্স পরিশোধ</a>
+          </div>
+        </div>
+        <div class="h-visual">
+          <div class="h-anim-wrap">
+            <div class="h-glow"></div>
+            <div class="h-ring r1"></div>
+            <div class="h-ring r2"></div>
+
+            <!-- স্লাইড ১: সনদ -->
+            <div class="h-anim-slide active">
+              <div class="anim-sonod">
+                <div class="cert-stack">
+                  <div class="cert-card">
+                    <div class="cert-top"><div class="cert-icon"><i class="fas fa-file"></i></div><span class="cert-title">সনদপত্র</span></div>
+                    <span class="cert-name">জন্ম সনদ</span>
+                    <div class="cert-bar"><div class="cert-bar-line"><div class="cert-bar-fill"></div></div></div>
+                  </div>
+                  <div class="cert-card">
+                    <div class="cert-top"><div class="cert-icon"><i class="fas fa-file"></i></div><span class="cert-title">সনদপত্র</span></div>
+                    <span class="cert-name">মৃত্যু সনদ</span>
+                    <div class="cert-bar"><div class="cert-bar-line"><div class="cert-bar-fill"></div></div></div>
+                  </div>
+                  <div class="cert-card">
+                    <div class="cert-top"><div class="cert-icon"><i class="fas fa-file-lines"></i></div><span class="cert-title">সনদপত্র</span></div>
+                    <span class="cert-name">ওয়ারিশ সনদ</span>
+                    <span class="cert-type">ডিজিটালি ভেরিফাইড</span>
+                    <div class="cert-bar"><div class="cert-bar-line"><div class="cert-bar-fill"></div></div></div>
+                    <div class="cert-stamp"><i class="fas fa-check"></i></div>
+                  </div>
+                </div>
+                <div class="sonod-badges">
+                  <div class="sonod-badge"><i class="fas fa-shield-halved"></i> ভেরিফাইড</div>
+                  <div class="sonod-badge"><i class="fas fa-qrcode"></i> QR কোড</div>
+                  <div class="sonod-badge"><i class="fas fa-bolt"></i> তাৎক্ষণিক</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- স্লাইড ২: অ্যাপ -->
+            <div class="h-anim-slide">
+              <div class="anim-app">
+                <div class="phone">
+                  <div class="phone-s">
+                    <i class="fas fa-file-certificate p-logo"></i>
+                    <span class="p-name">সনদ</span>
+                    <span class="p-desc">ডিজিটাল সনদ প্ল্যাটফর্ম</span>
+                    <div class="dl-prog">
+                      <div class="dl-bg"><div class="dl-fill"></div></div>
+                      <div class="dl-txt">ডাউনলোড হচ্ছে...</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dl-badges">
+                  <div class="dl-b"><i class="fab fa-google-play"></i> প্লে স্টোর</div>
+                  <div class="dl-b"><i class="fas fa-star"></i> ৪.৮ রেটিং</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- স্লাইড ৩: দ্রুত প্রক্রিয়া -->
+            <div class="h-anim-slide">
+              <div class="anim-fast">
+                <div class="fast-board">
+                  <div class="fast-header">
+                    <span>প্রক্রিয়া গতি</span>
+                    <div class="fast-status"><div class="fast-dot"></div><div class="fast-dot"></div><div class="fast-dot"></div></div>
+                  </div>
+                  <div class="fast-meters">
+                    <div class="fast-meter"><span class="fast-meter-label">আবেদন</span><div class="fast-meter-bar"><div class="fast-meter-fill"></div></div><span class="fast-meter-val">৯৫%</span></div>
+                    <div class="fast-meter"><span class="fast-meter-label">যাচাই</span><div class="fast-meter-bar"><div class="fast-meter-fill"></div></div><span class="fast-meter-val">৮৮%</span></div>
+                    <div class="fast-meter"><span class="fast-meter-label">অনুমোদন</span><div class="fast-meter-bar"><div class="fast-meter-fill"></div></div><span class="fast-meter-val">৭৬%</span></div>
+                    <div class="fast-meter"><span class="fast-meter-label">বিতরণ</span><div class="fast-meter-bar"><div class="fast-meter-fill"></div></div><span class="fast-meter-val">৯২%</span></div>
+                  </div>
+                  <div class="fast-checks">
+                    <div class="fast-chk"><i class="fas fa-check-circle"></i> দ্রুত</div>
+                    <div class="fast-chk"><i class="fas fa-check-circle"></i> নির্ভুল</div>
+                    <div class="fast-chk"><i class="fas fa-check-circle"></i> স্বচ্ছ</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- স্লাইড ৪: OCR -->
+            <div class="h-anim-slide">
+              <div class="anim-ocr">
+                <div class="nid">
+                  <div class="nid-h"><div class="nid-fl"></div><span class="nid-t">জাতীয় পরিচয়পত্র</span></div>
+                  <div class="nid-fs">
+                    <div class="nid-f"><div class="nid-ff"></div></div>
+                    <div class="nid-f"><div class="nid-ff"></div></div>
+                    <div class="nid-f"><div class="nid-ff"></div></div>
+                    <div class="nid-f"><div class="nid-ff"></div></div>
+                  </div>
+                  <div class="nid-scan"></div>
+                </div>
+                <div class="ocr-r">
+                  <div class="ocr-row"><i class="fas fa-user"></i><span>নাম:</span><span class="v">মোহাম্মদ রহিম</span></div>
+                  <div class="ocr-row"><i class="fas fa-father"></i><span>পিতা:</span><span class="v">করিম উদ্দিন</span></div>
+                  <div class="ocr-row"><i class="fas fa-calendar"></i><span>জন্ম:</span><span class="v">১৫/০৩/১৯৯৫</span></div>
+                  <div class="ocr-row"><i class="fas fa-hashtag"></i><span>NID:</span><span class="v">৯৫********</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- স্লাইড ৫: ভয়েস -->
+            <div class="h-anim-slide">
+              <div class="anim-voice">
+                <div class="mic-c">
+                  <div class="mic-circle"><i class="fas fa-microphone"></i></div>
+                  <div class="v-waves"><div class="v-w"></div><div class="v-w"></div><div class="v-w"></div></div>
+                </div>
+                <div class="v-form">
+                  <div class="v-row"><label>নাম</label><div class="fld"><div class="fld-f"></div></div><i class="fas fa-check-circle v-chk"></i></div>
+                  <div class="v-row"><label>পিতা</label><div class="fld"><div class="fld-f"></div></div><i class="fas fa-check-circle v-chk"></i></div>
+                  <div class="v-row"><label>মাতা</label><div class="fld"><div class="fld-f"></div></div><i class="fas fa-check-circle v-chk"></i></div>
+                  <div class="v-row"><label>ঠিকানা</label><div class="fld"><div class="fld-f"></div></div><i class="fas fa-check-circle v-chk"></i></div>
+                  <div class="v-row"><label>জন্ম তারিখ</label><div class="fld"><div class="fld-f"></div></div><i class="fas fa-check-circle v-chk"></i></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- স্লাইড ৬: ট্যাক্স -->
+            <div class="h-anim-slide">
+              <div class="anim-tax">
+                <div class="tax-receipt">
+                  <div class="tax-head"><h4>হোল্ডিং ট্যাক্স রিসিট</h4><span>আর্থিক বছর ২০২৪-২৫</span></div>
+                  <div class="tax-rows">
+                    <div class="tax-row"><span class="tl">হোল্ডিং নং</span><span class="tv">১২৩৪৫</span></div>
+                    <div class="tax-row"><span class="tl">মূল ট্যাক্স</span><span class="tv">৳ ২,৫০০</span></div>
+                    <div class="tax-row"><span class="tl">সারচার্জ</span><span class="tv">৳ ১২৫</span></div>
+                    <div class="tax-row"><span class="tl">পূর্বের বকেয়া</span><span class="tv">৳ ৫০০</span></div>
+                  </div>
+                  <div class="tax-total"><span class="tl">মোট পরিশোধ</span><span class="tv">৳ ৩,১২৫</span></div>
+                  <div class="tax-paid">PAID</div>
+                </div>
+                <div class="tax-methods">
+                  <div class="tax-m"><i class="fab fa-bkash"></i></div>
+                  <div class="tax-m"><i class="fas fa-wallet"></i></div>
+                  <div class="tax-m"><i class="fas fa-credit-card"></i></div>
+                  <div class="tax-m"><i class="fas fa-building-columns"></i></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- স্লাইডার কন্ট্রোল -->
+            <div class="s-arr prev"><i class="fas fa-chevron-left"></i></div>
+            <div class="s-arr next"><i class="fas fa-chevron-right"></i></div>
+            <div class="s-dots">
+              <div class="s-dot active"></div>
+              <div class="s-dot"></div>
+              <div class="s-dot"></div>
+              <div class="s-dot"></div>
+              <div class="s-dot"></div>
+              <div class="s-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- আমাদের সম্পর্কে -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual rv">
+          <div class="about-img-frame">
+            <i class="fas fa-file-certificate" style="font-size:80px;color:var(--accent);opacity:.15;"></i>
+          </div>
+          <div class="about-fc">
+            <div class="ai"><i class="fas fa-check-circle"></i></div>
+            <div><div class="an">১০,০০০+</div><div class="al">সনদ সফলভাবে প্রদান</div></div>
+          </div>
+        </div>
+        <div class="about-text rv">
+          <div class="at-tag"><i class="fas fa-info-circle"></i> আমাদের সম্পর্কে</div>
+          <h2>সনদ — ডিজিটাল বাংলাদেশের <span class="tg">অগ্রদূত</span></h2>
+          <p>সনদ হলো বাংলাদেশের ইউনিয়ন পরিষদ পর্যায়ে সনদপত্র প্রদান ও হোল্ডিং ট্যাক্স সংগ্রহের প্রথম সম্পূর্ণ ডিজিটাল প্ল্যাটফর্ম।</p>
+          <p>আমাদের লক্ষ্য হলো নাগরিকদের দালালমুক্ত, স্বচ্ছ ও দ্রুত সেবা প্রদান করা। OCR ও ভয়েস ইনপুট প্রযুক্তির মাধ্যমে আবেদন প্রক্রিয়া আরও সহজ করা হয়েছে।</p>
+          <div class="about-feats">
+            <div class="af"><i class="fas fa-shield-halved"></i> নিরাপদ ডিজিটাল সেবা</div>
+            <div class="af"><i class="fas fa-bolt"></i> তাৎক্ষণিক প্রক্রিয়াকরণ</div>
+            <div class="af"><i class="fas fa-eye"></i> সম্পূর্ণ স্বচ্ছতা</div>
+            <div class="af"><i class="fas fa-mobile-screen"></i> মোবাইল অ্যাপ সুবিধা</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- সেবাসমূহ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header rv">
+        <div class="section-tag"><i class="fas fa-concierge-bell"></i> আমাদের সেবাসমূহ</div>
+        <h2>এক প্ল্যাটফর্মে <span class="tg">সকল সেবা</span></h2>
+        <p>ইউনিয়ন পরিষদের নাগরিক সেবাগুলো এখন আপনার হাতের মুঠোয়</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card rv" onclick="openServiceModal('sonod')">
+          <div class="si" style="background:linear-gradient(135deg,#c6f91f,#7dd328)"><i class="fas fa-file-certificate"></i></div>
+          <h3>ডিজিটাল সনদপত্র</h3>
+          <p class="ss">জন্ম, মৃত্যু, ওয়ারিশ, চেয়ারম্যান সনদসহ সকল সনদ</p>
+          <button class="sd-btn">বিস্তারিত দেখুন <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="svc-card rv" onclick="openServiceModal('tax')">
+          <div class="nb">জনপ্রিয়</div>
+          <div class="si" style="background:linear-gradient(135deg,#f59e0b,#d97706)"><i class="fas fa-landmark"></i></div>
+          <h3>হোল্ডিং ট্যাক্স পরিশোধ</h3>
+          <p class="ss">বিকাশ, নগদ, রকেটে সহজে ট্যাক্স পরিশোধ</p>
+          <button class="sd-btn">বিস্তারিত দেখুন <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="svc-card rv" onclick="openServiceModal('ocr')">
+          <div class="si" style="background:linear-gradient(135deg,#1a56db,#3b82f6)"><i class="fas fa-id-card"></i></div>
+          <h3>OCR স্বয়ংক্রিয় ফর্ম</h3>
+          <p class="ss">NID স্ক্যান করলেই স্বয়ংক্রিয় ফর্ম পূরণ</p>
+          <button class="sd-btn">বিস্তারিত দেখুন <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="svc-card rv" onclick="openServiceModal('voice')">
+          <div class="nb">নতুন</div>
+          <div class="si" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)"><i class="fas fa-microphone"></i></div>
+          <h3>ভয়েস ইনপুট</h3>
+          <p class="ss">বাংলায় কথা বলেই ফর্ম পূরণ করুন</p>
+          <button class="sd-btn">বিস্তারিত দেখুন <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="svc-card vgf-card rv" onclick="openServiceModal('vgf')">
+          <div class="vgf-eid-badge">EID</div>
+          <div class="si" style="background:linear-gradient(135deg,#c6f91f,#7dd328)"><i class="fas fa-wheat-awn"></i></div>
+          <h3>VGF চাল বিতরণ</h3>
+          <p class="ss">ভালোন্তরীয় খাদ্য কর্মসূচি ডিজিটাল ব্যবস্থাপনা</p>
+          <div class="vgf-rice-icons">
+            <span class="vgf-rice-icon">🌾</span>
+            <span class="vgf-rice-icon">🌾</span>
+            <span class="vgf-rice-icon">🌾</span>
+            <span class="vgf-rice-icon">🌾</span>
+          </div>
+        </div>
+        <div class="svc-card rv" onclick="openServiceModal('app')">
+          <div class="si" style="background:linear-gradient(135deg,#06d6a0,#059669)"><i class="fas fa-mobile-screen-button"></i></div>
+          <h3>মোবাইল অ্যাপ</h3>
+          <p class="ss">অ্যান্ড্রয়েড অ্যাপে সকল সেবা হাতের মুঠোয়</p>
+          <button class="sd-btn">বিস্তারিত দেখুন <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="svc-card rv" onclick="openServiceModal('nid')">
+          <div class="si" style="background:linear-gradient(135deg,#ef4444,#f97316)"><i class="fas fa-fingerprint"></i></div>
+          <h3>NID যাচাইকরণ</h3>
+          <p class="ss">জাতীয় পরিচয়পত্রের তথ্য তাৎক্ষণিক যাচাই</p>
+          <button class="sd-btn">বিস্তারিত দেখুন <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="svc-card rv" onclick="openServiceModal('complaint')">
+          <div class="si" style="background:linear-gradient(135deg,#ec4899,#f43f5e)"><i class="fas fa-bullhorn"></i></div>
+          <h3>অভিযোগ ব্যবস্থাপনা</h3>
+          <p class="ss">ডিজিটালভাবে অভিযোগ দায়ের ও ট্র্যাক করুন</p>
+          <button class="sd-btn">বিস্তারিত দেখুন <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- সার্ভিস মোডাল -->
+  <div class="sm-ov" id="serviceModal">
+    <div class="sm-md">
+      <button class="sm-cl" onclick="closeServiceModal()"><i class="fas fa-times"></i></button>
+      <div class="sIcon"><i class="fas fa-file-certificate"></i></div>
+      <h3>সেবার নাম</h3>
+      <p class="sDesc">সেবার বিবরণ</p>
+      <div class="sTags"></div>
+      <a href="#" class="sLink">লিংক <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- বৈশিষ্ট্যসমূহ -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header rv">
+        <div class="section-tag"><i class="fas fa-star"></i> কেন সনদ বেছে নেবেন</div>
+        <h2>আমাদের <span class="tg">বিশেষ বৈশিষ্ট্যসমূহ</span></h2>
+        <p>প্রযুক্তি ও স্বচ্ছতার সমন্বয়ে তৈরি আধুনিক সেবা প্ল্যাটফর্ম</p>
+      </div>
+      <div class="feat-grid">
+        <div class="fc rv">
+          <div class="fi"><i class="fas fa-user-shield"></i></div>
+          <h3>দালালমুক্ত সেবা</h3>
+          <p>কোনো মধ্যস্বত্বভোগী ছাড়া সরাসরি ইউনিয়ন পরিষদ থেকে সেবা গ্রহণ করুন।</p>
+        </div>
+        <div class="fc rv">
+          <div class="fi"><i class="fas fa-robot"></i></div>
+          <h3>AI চালিত প্রক্রিয়া</h3>
+          <p>OCR ও ভয়েস রিকগনিশন প্রযুক্তি দিয়ে আবেদন প্রক্রিয়া স্বয়ংক্রিয় করা হয়েছে।</p>
+        </div>
+        <div class="fc rv">
+          <div class="fi"><i class="fas fa-lock"></i></div>
+          <h3>শক্তিশালী নিরাপত্তা</h3>
+          <p>আপনার সকল তথ্য এনক্রিপ্টেড সার্ভারে সুরক্ষিত রাখা হয়।</p>
+        </div>
+        <div class="fc rv">
+          <div class="fi"><i class="fas fa-bell"></i></div>
+          <h3>রিয়েল-টাইম নোটিফিকেশন</h3>
+          <p>আবেদনের অবস্থা, অনুমোদন ও সনদ প্রস্তুতির তাৎক্ষণিক আপডেট পান।</p>
+        </div>
+        <div class="fc rv">
+          <div class="fi"><i class="fas fa-language"></i></div>
+          <h3>সম্পূর্ণ বাংলায়</h3>
+          <p>ইন্টারফেস থেকে শুরু করে ভয়েস ইনপুট পর্যন্ত সবকিছু বাংলায়।</p>
+        </div>
+        <div class="fc rv">
+          <div class="fi"><i class="fas fa-chart-line"></i></div>
+          <h3>ড্যাশবোর্ড ও রিপোর্ট</h3>
+          <p>ইউপি চেয়ারম্যানদের জন্য সেবার পরিসংখ্যান ও রিপোর্টিং ব্যবস্থা।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- পোর্টাল -->
+  <section class="portal" id="portal">
+    <div class="container">
+      <div class="section-header rv">
+        <div class="section-tag"><i class="fas fa-door-open"></i> পোর্টাল সমূহ</div>
+        <h2>আপনার জন্য <span class="tg">উপযুক্ত পোর্টাল</span></h2>
+        <p>নাগরিক ও প্রশাসক উভয়ের জন্য আলাদা পোর্টাল</p>
+      </div>
+      <div class="pt-grid">
+        <div class="pt-card rv" onclick="window.open('https://v3.sonod.com.bd/auth/citizen-register','_blank')">
+          <div class="pt-icon"><i class="fas fa-user"></i></div>
+          <h3>নাগরিক পোর্টাল</h3>
+          <p>সনদ আবেদন, ট্যাক্স পরিশোধ, আবেদন ট্র্যাকিং</p>
+        </div>
+        <div class="pt-card rv" onclick="window.open('https://v3.sonod.com.bd/auth/up-login','_blank')">
+          <div class="pt-icon"><i class="fas fa-building-columns"></i></div>
+          <h3>ইউপি অ্যাডমিন পোর্টাল</h3>
+          <p>সনদ অনুমোদন, ট্যাক্স ব্যবস্থাপনা, রিপোর্ট</p>
+        </div>
+        <div class="pt-card rv" onclick="window.open('https://v3.sonod.com.bd/vgf','_blank')">
+          <div class="pt-icon"><i class="fas fa-wheat-awn"></i></div>
+          <h3>VGF পোর্টাল</h3>
+          <p>চাল বিতরণ ব্যবস্থাপনা, EID যাচাই</p>
+        </div>
+        <div class="pt-card rv" onclick="window.open('https://v3.sonod.com.bd/complaint','_blank')">
+          <div class="pt-icon"><i class="fas fa-bullhorn"></i></div>
+          <h3>অভিযোগ পোর্টাল</h3>
+          <p>অভিযোগ দায়ের, ট্র্যাকিং ও সমাধান</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- অংশীদার -->
+  <section class="partners" id="partners">
+    <div class="container">
+      <div class="section-header rv">
+        <div class="section-tag"><i class="fas fa-handshake"></i> আমাদের অংশীদার</div>
+        <h2>যারা <span class="tg">সাথে আছেন</span></h2>
+        <p>সরকারি ও বেসরকারি প্রতিষ্ঠানের সাথে সমন্বিত প্রচেষ্টা</p>
+      </div>
+      <div class="pr-grid">
+        <div class="pr-card rv"><div class="pr-logo"><i class="fas fa-landmark-dome"></i></div><h3>তথ্য ও যোগাযোগ প্রযুক্তি মন্ত্রণালয়</h3></div>
+        <div class="pr-card rv"><div class="pr-logo"><i class="fas fa-building-columns"></i></div><h3>স্থানীয় সরকার বিভাগ</h3></div>
+        <div class="pr-card rv"><div class="pr-logo"><i class="fas fa-credit-card"></i></div><h3>বিকাশ, নগদ, রকেট</h3></div>
+        <div class="pr-card rv"><div class="pr-logo"><i class="fas fa-id-card"></i></div><h3>নির্বাচন কমিশন</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- পরিসংখ্যান -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="st-grid">
+        <div class="st-card rv">
+          <div class="st-icon"><i class="fas fa-file-certificate"></i></div>
+          <div class="st-num" data-count="10000" data-suffix="+">০</div>
+          <div class="st-lbl">সনদ প্রদান</div>
+        </div>
+        <div class="st-card rv">
+          <div class="st-icon"><i class="fas fa-building-columns"></i></div>
+          <div class="st-num" data-count="500" data-suffix="+">০</div>
+          <div class="st-lbl">ইউনিয়ন পরিষদ</div>
+        </div>
+        <div class="st-card rv">
+          <div class="st-icon"><i class="fas fa-users"></i></div>
+          <div class="st-num" data-count="50000" data-suffix="+">০</div>
+          <div class="st-lbl">নিবন্ধিত নাগরিক</div>
+        </div>
+        <div class="st-card rv">
+          <div class="st-icon"><i class="fas fa-star"></i></div>
+          <div class="st-num" data-count="4" data-suffix=".৮">০</div>
+          <div class="st-lbl">অ্যাপ রেটিং</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- স্বয়ংক্রিয় প্রক্রিয়া -->
+  <section class="auto-process" id="process">
+    <div class="container">
+      <div class="section-header rv">
+        <div class="section-tag"><i class="fas fa-gears"></i> কিভাবে কাজ করে</div>
+        <h2>স্বয়ংক্রিয় <span class="tg">প্রক্রিয়া প্রবাহ</span></h2>
+        <p>আবেদন থেকে সনদ প্রাপ্তি পর্যন্ত প্রতিটি ধাপ স্বয়ংক্রিয়</p>
+      </div>
+      <div class="zoom-track rv">
+        <div class="zoom-step zoom-active">
+          <div class="zoom-num">১</div>
+          <div class="zoom-circ"><i class="fas fa-user-plus"></i></div>
+          <h3>নিবন্ধন</h3>
+          <p>মোবাইল নম্বর দিয়ে সহজেই একাউন্ট তৈরি</p>
+        </div>
+        <div class="zoom-connector"></div>
+        <div class="zoom-step">
+          <div class="zoom-num">২</div>
+          <div class="zoom-circ"><i class="fas fa-file-pen"></i></div>
+          <h3>আবেদন</h3>
+          <p>OCR বা ভয়েস দিয়ে স্বয়ংক্রিয় ফর্ম পূরণ</p>
+        </div>
+        <div class="zoom-connector"></div>
+        <div class="zoom-step">
+          <div class="zoom-num">৩</div>
+          <div class="zoom-circ"><i class="fas fa-credit-card"></i></div>
+          <h3>পেমেন্ট</h3>
+          <p>বিকাশ, নগদ, রকেটে সহজে ফি পরিশোধ</p>
+        </div>
+        <div class="zoom-connector"></div>
+        <div class="zoom-step">
+          <div class="zoom-num">৪</div>
+          <div class="zoom-circ"><i class="fas fa-clipboard-check"></i></div>
+          <h3>যাচাই</h3>
+          <p>ইউপি সচিব তথ্য যাচাই ও অনুমোদন</p>
+        </div>
+        <div class="zoom-connector"></div>
+        <div class="zoom-step">
+          <div class="zoom-num">৫</div>
+          <div class="zoom-circ"><i class="fas fa-file-certificate"></i></div>
+          <h3>সনদ প্রাপ্তি</h3>
+          <p>ডিজিটাল সনদ ডাউনলোড ও প্রিন্ট</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="cta">
+    <div class="cta-bg">
+      <div class="cd cd1"></div>
+      <div class="cd cd2"></div>
+      <div class="cg"></div>
+      <div class="cta-inner">
+        <div class="cta-content rv">
+          <h2>আজই শুরু করুন <span class="tg">ডিজিটাল সনদ</span> যাত্রা</h2>
+          <p>আর দেরি নয়। আপনার মোবাইলে সনদ অ্যাপ ডাউনলোড করে বা ওয়েবসাইটে গিয়ে সহজেই সনদের জন্য আবেদন করুন। দালালমুক্ত, স্বচ্ছ ও দ্রুত সেবা পান।</p>
+          <div class="cta-btns">
+            <a href="https://v3.sonod.com.bd/auth/citizen-register" target="_blank" class="btn btn-p btn-lg"><i class="fas fa-file-certificate"></i> এখনই আবেদন করুন</a>
+            <a href="https://play.google.com/store/apps/details?id=app.bdfast.sonoddorkar" target="_blank" class="btn btn-gl btn-lg"><i class="fab fa-google-play"></i> অ্যাপ ডাউনলোড</a>
+          </div>
+        </div>
+        <div class="cta-illustration rv">
+          <div class="illust-ring ir1"></div>
+          <div class="illust-ring ir2"></div>
+          <div class="illust-ring ir3"></div>
+          <div class="illust-dot id1"></div>
+          <div class="illust-dot id2"></div>
+          <div class="illust-dot id3"></div>
+          <div class="illust-dot id4"></div>
+          <div class="illust-dot id5"></div>
+          <div class="illust-doc d1"><div class="doc-line"></div><div class="doc-line"></div><div class="doc-line"></div></div>
+          <div class="illust-doc d2"><div class="doc-line"></div><div class="doc-line"></div><div class="doc-line"></div></div>
+          <div class="illust-doc d3"><div class="doc-line"></div><div class="doc-line"></div><div class="doc-line"></div></div>
+          <div class="illust-phone">
+            <div class="illust-phone-screen">
+              <i class="fas fa-file-certificate"></i>
+              <span>সনদ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ফুটার -->
+  <footer id="footer">
+    <div class="ft-main">
+      <div class="container">
+        <div class="ft-grid">
+          <div class="ft-brand">
+            <img src="logo.png" alt="সনদ" onerror="this.src='https://placehold.co/120x44/253445/c6f91f?text=SONOD&font=roboto'">
+            <h3>সনদ</h3>
+            <p>বাংলাদেশের ইউনিয়ন পরিষদ পর্যায়ে সনদপত্র প্রদান ও হোল্ডিং ট্যাক্স সংগ্রহের প্রথম সম্পূর্ণ ডিজিটাল প্ল্যাটফর্ম।</p>
+            <div class="soc-links">
+              <a href="#" aria-label="ফেসবুক"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="ইউটিউব"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="টুইটার"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="লিংকডইন"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="ft-col">
+            <h4>দ্রুত লিংক</h4>
+            <ul>
+              <li><a href="#home">হোম <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="#about">আমাদের সম্পর্কে <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="#services">সেবাসমূহ <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="#features">বৈশিষ্ট্যসমূহ <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="#portal">পোর্টাল সমূহ <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="javascript:void(0)" onclick="openContactPage()">যোগাযোগ <i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+          </div>
+          <div class="ft-col">
+            <h4>সেবাসমূহ</h4>
+            <ul>
+              <li><a href="https://v3.sonod.com.bd/auth/citizen-register" target="_blank">জন্ম সনদ <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="https://v3.sonod.com.bd/auth/citizen-register" target="_blank">মৃত্যু সনদ <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="https://v3.sonod.com.bd/auth/citizen-register" target="_blank">ওয়ারিশ সনদ <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="https://v3.sonod.com.bd/tax-payment" target="_blank">হোল্ডিং ট্যাক্স <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="https://v3.sonod.com.bd/vgf" target="_blank">VGF ব্যবস্থাপনা <i class="fas fa-chevron-right"></i></a></li>
+              <li><a href="https://v3.sonod.com.bd/complaint" target="_blank">অভিযোগ <i class="fas fa-chevron-right"></i></a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-size:14px;font-weight:600;color:var(--t1);margin-bottom:24px;text-transform:uppercase;letter-spacing:.08em;">যোগাযোগ</h4>
+            <div class="ci"><i class="fas fa-map-marker-alt"></i><div><strong>ঠিকানা</strong><p>ঢাকা, বাংলাদেশ</p></div></div>
+            <div class="ci"><i class="fas fa-envelope"></i><div><strong>ইমেইল</strong><p>info@sonod.com.bd</p></div></div>
+            <div class="ci"><i class="fas fa-phone"></i><div><strong>ফোন</strong><p>প্রযোজ্য নয় (অনলাইন সেবা)</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+        <p>&copy; ২০২৫ সনদ। সর্বস্বত্ব সংরক্ষিত।</p>
+        <div class="ft-bottom-links">
+          <a href="javascript:void(0)" onclick="openLegalPage('privacy')">গোপনীয়তা নীতি</a>
+          <a href="javascript:void(0)" onclick="openLegalPage('terms')">ব্যবহারের শর্তাবলী</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- কন্টাক্ট পেজ (ফুলস্ক্রিন ওভারলে) -->
+  <div class="contact-page" id="contactPage">
+    <div class="cp-inner">
+      <button class="cp-back" onclick="closeContactPage()"><i class="fas fa-arrow-left"></i> ফিরে যান</button>
+      <h1>যোগাযোগ <span class="tg">করুন</span></h1>
+      <p class="cp-sub">আপনার যেকোনো প্রশ্ন বা সমস্যার জন্য আমাদের সাথে যোগাযোগ করুন</p>
+      <form class="cp-form" id="contactForm">
+        <div class="cp-row">
+          <div class="cp-field"><label>আপনার নাম</label><input type="text" placeholder="পূর্ণ নাম লিখুন" required></div>
+          <div class="cp-field"><label>মোবাইল নম্বর</label><input type="tel" placeholder="০১XXXXXXXXX" required></div>
+        </div>
+        <div class="cp-field"><label>ইমেইল</label><input type="email" placeholder="email@example.com"></div>
+        <div class="cp-field">
+          <label>বিষয়</label>
+          <select required>
+            <option value="">বিষয় নির্বাচন করুন</option>
+            <option>সনদ সম্পর্কিত জিজ্ঞাসা</option>
+            <option>ট্যাক্স সম্পর্কিত জিজ্ঞাসা</option>
+            <option>প্রযুক্তিগত সমস্যা</option>
+            <option>অভিযোগ</option>
+            <option>পরামর্শ</option>
+            <option>অন্যান্য</option>
+          </select>
+        </div>
+        <div class="cp-field"><label>বিস্তারিত</label><textarea placeholder="আপনার বার্তা লিখুন..." required></textarea></div>
+        <button type="submit" class="btn btn-p btn-lg" style="align-self:flex-start;"><i class="fas fa-paper-plane"></i> প্রেরণ করুন</button>
+      </form>
+      <div class="cp-info">
+        <div class="cp-info-card"><i class="fas fa-envelope"></i><div><strong>ইমেইল</strong><span>info@sonod.com.bd</span></div></div>
+        <div class="cp-info-card"><i class="fas fa-globe"></i><div><strong>ওয়েবসাইট</strong><span>www.sonod.com.bd</span></div></div>
+        <div class="cp-info-card"><i class="fab fa-facebook-f"></i><div><strong>ফেসবুক</strong><span>facebook.com/sonod</span></div></div>
+        <div class="cp-info-card"><i class="fab fa-youtube"></i><div><strong>ইউটিউব</strong><span>YouTube: সনদ</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- লিগাল ওভারলে -->
+  <div class="legal-ov" id="legalOverlay">
+    <div class="legal-md">
+      <!-- JS দিয়ে কন্টেন্ট লোড হবে -->
+    </div>
+  </div>
+
+  <!-- ব্যাক টু টপ বাটন -->
+  <button class="btt" aria-label="উপরে যান"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
